@@ -7,7 +7,7 @@ import tseslint from 'typescript-eslint';
 export default tseslint.config(
   {
     // config with just ignores is the replacement for `.eslintignore`
-    ignores: ['**/build/**', '**/dist/**', '**/config**'],
+    ignores: ['**/build/**', '**/dist/**', '*config*'],
   },
   eslint.configs.recommended,
   {
@@ -36,7 +36,7 @@ export default tseslint.config(
   },
   {
     // enable jest rules on test files
-    files: ['test/**'],
+    files: ['*test*'],
     ...jestPlugin.configs['flat/recommended'],
   },
 );
